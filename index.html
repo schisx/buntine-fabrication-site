@@ -3,77 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Welding & Metal Fabrication — Buntine Fabrication</title>
-  <meta name="description" content="Aluminium & steel fabrication and welding. Boat modifications, trailer repairs, ute trays/canopies/cages, fence panels & gates, and customised fabrication. Darwin NT." />
+  <title>Buntine Fabrication — Welding & Metal Fabrication, Darwin NT</title>
+  <meta name="description" content="Aluminium & steel fabrication and welding. Boat modifications, trailer repairs, ute trays, canopies & cages, fence panels & gates, and customised fabrication work." />
 
-  <link rel="icon" href="assets/logo.png" type="image/png" />
-  <style>
-    :root{
-      --bg:#0e0e0f; --fg:#111; --ink:#111; --ink-muted:#555; --brand:#ffb703; --paper:#fff; --muted:#f6f7f8;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6; color:var(--ink); background:var(--muted)}
-    a{color:inherit; text-decoration:none}
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 
-    header{background:#1b1b1c; color:#fff; position:sticky; top:0; z-index:10; box-shadow:0 2px 8px rgba(0,0,0,.2)}
-    .wrap{max-width:1100px; margin:0 auto; padding:12px 16px}
+  <!-- Social preview (uses assets/social-preview.png you downloaded) -->
+  <meta property="og:title" content="Buntine Fabrication — Welding & Metal Fabrication, Darwin NT">
+  <meta property="og:description" content="Aluminium & steel fabrication and welding. Boat mods, trailer repairs, ute trays, canopies, cages, fences and custom jobs.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Buntine Fabrication — Welding & Metal Fabrication, Darwin NT">
+  <meta name="twitter:description" content="Custom welding, fabrication, and repairs in Darwin NT. Call 0429 032 300.">
+  <meta name="twitter:image" content="assets/social-preview.png">
 
-    /* Centered brand block with logo and phone */
-    .brand{display:flex; flex-direction:column; align-items:center; text-align:center; gap:4px}
-    .brand img{width:260px; max-width:100%; height:auto; object-fit:contain}
-    .brand .phone a {
-      font-weight:600;
-      font-size:1rem;
-      color:#fff;
-      text-decoration:none;
-    }
-    .brand .phone a:hover {
-      text-decoration:underline;
-    }
+  <!-- JSON-LD: only open days listed -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Buntine Fabrication",
+    "description": "Aluminium & steel fabrication and welding. Boat mods, trailer repairs, ute trays/canopies/cages, gates & fences, custom work.",
+    "image": "assets/logo.png",
+    "telephone": "+61429032300",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61573398356288",
+      "https://www.instagram.com/buntinefabrication2025"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "U6/5 Roni Court",
+      "addressLocality": "Darwin City",
+      "addressRegion": "NT",
+      "addressCountry": "AU"
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"08:00","closes":"16:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"08:00","closes":"16:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"08:00","closes":"16:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"08:00","closes":"16:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"16:30"}
+    ]
+  }
+  </script>
 
-    nav{display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:8px}
-    nav a{color:#fff; opacity:.9}
-    nav a:hover{opacity:1}
-
-    .hero{background:#1b1b1c; color:#fff; padding:36px 16px}
-    .hero h1{font-size:clamp(28px, 5vw, 44px); margin:0 0 8px; text-align:center}
-    .hero p{margin:0; color:#d7d7d7; text-align:center}
-
-    main{padding:24px 16px}
-    section{background:var(--paper); border:1px solid #e9eaec; border-radius:14px; padding:24px; margin:0 auto 20px; max-width:1100px; box-shadow:0 1px 3px rgba(0,0,0,.04)}
-    h2{margin-top:0}
-
-    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
-    .card{border:1px solid #eef0f2; border-radius:12px; padding:16px; background:#fafafa}
-
-    .gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px}
-    .gallery img{width:100%; height:180px; object-fit:cover; border-radius:10px; border:1px solid #eee}
-
-    footer{background:#121213; color:#bbb; padding:24px 16px}
-    .foot{max-width:1100px; margin:0 auto; display:grid; gap:12px; text-align:center}
-
-    #home, #services, #gallery, #about, #contact { scroll-margin-top: 110px; }
-
-    .hours{display:grid; grid-template-columns:1fr auto; gap:8px; max-width:420px}
-    .hours div{display:contents}
-    .hours span{padding:2px 0}
-
-    .fb-embed{border:1px solid #e5e7eb; border-radius:12px; overflow:hidden}
-  </style>
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-  <!-- Invisible anchor for Home -->
+  <!-- Invisible anchor for top -->
   <a id="home" style="position:relative; top:-120px;"></a>
 
   <header>
     <div class="wrap">
       <div class="brand">
         <img src="assets/logo.png" alt="Buntine Fabrication logo" />
-        <div class="phone"><a href="tel:0429032300">📞 0429 032 300</a></div>
+        <div class="phone"><a href="tel:0429032300" aria-label="Call 0429 032 300">📞 0429 032 300</a></div>
       </div>
-      <nav>
+      <nav aria-label="Primary">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
@@ -86,11 +76,10 @@
   <section class="hero">
     <div class="wrap">
       <h1>Buntine Fabrication — Welding & Metal Fabrication, Darwin NT</h1>
-      <p>Aluminium & steel fabrication and welding. Boat modifications, trailer repairs, ute trays/canopies & cages, fence panels & gates, and customised fabrication work.</p>
+      <p>Aluminium & steel fabrication and welding. Boat modifications, trailer repairs, ute trays, canopies & cages, fence panels & gates, and customised fabrication work.</p>
     </div>
   </section>
 
-  <!-- Services -->
   <main>
     <section id="services">
       <h2>Services</h2>
@@ -104,29 +93,26 @@
       </div>
     </section>
 
-    <!-- Gallery -->
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="gallery">
-        <img src="assets/1.jpg" alt="Custom ute tray" />
-        <img src="assets/2.jpg" alt="Boat trailer frame" />
-        <img src="assets/3.jpg" alt="Aluminium storage box" />
-        <img src="assets/4.jpg" alt="Tray and canopy build" />
-        <img src="assets/5.jpg" alt="Red ute with custom canopy open" />
-        <img src="assets/6.jpg" alt="Red ute with custom canopy slide-out" />
-        <img src="assets/7.jpg" alt="Aluminium mesh cage" />
-        <img src="assets/8.jpg" alt="Tall aluminium toolbox" />
-        <img src="assets/9.jpg" alt="Completed canopy installation" />
+        <img src="assets/1.jpg" alt="Custom ute tray" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/1.webp">
+        <img src="assets/2.jpg" alt="Boat trailer frame" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/2.webp">
+        <img src="assets/3.jpg" alt="Aluminium storage box" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/3.webp">
+        <img src="assets/4.jpg" alt="Tray and canopy build" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/4.webp">
+        <img src="assets/5.jpg" alt="Red ute with custom canopy open" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/5.webp">
+        <img src="assets/6.jpg" alt="Red ute with custom canopy slide-out" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/6.webp">
+        <img src="assets/7.jpg" alt="Aluminium mesh cage" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/7.webp">
+        <img src="assets/8.jpg" alt="Tall aluminium toolbox" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/8.webp">
+        <img src="assets/9.jpg" alt="Completed canopy installation" width="800" height="480" loading="lazy" decoding="async" data-webp="assets/9.webp">
       </div>
     </section>
 
-    <!-- About -->
     <section id="about">
       <h2>About</h2>
-      <p>We are a local, owner-operated metal fabricator based at U6/5 Roni Court, Darwin City, NT. We provide both mobile and workshop services for aluminium and steel work, trailers, boats, gates, ute trays and custom jobs.</p>
+      <p>Local, owner-operated metal fabricator based at U6/5 Roni Court, Darwin City, NT. Mobile and workshop services for aluminium and steel work, trailers, boats, gates, ute trays and custom jobs.</p>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
       <div class="grid">
@@ -134,8 +120,8 @@
           <p><strong>Phone:</strong> <a href="tel:0429032300">0429 032 300</a></p>
           <p><strong>Address:</strong> <span>U6/5 Roni Court, Darwin City, NT, Australia</span></p>
           <p><strong>Email:</strong> <a href="mailto:buntinefabrication@gmail.com">buntinefabrication@gmail.com</a></p>
-          <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61573398356288" target="_blank">Open Facebook page</a></p>
-          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/buntinefabrication2025" target="_blank">@buntinefabrication2025</a></p>
+          <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61573398356288" target="_blank" rel="noopener">Open Facebook page</a></p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/buntinefabrication2025" target="_blank" rel="noopener">@buntinefabrication2025</a></p>
 
           <div style="margin-top:12px">
             <strong>Hours:</strong>
@@ -153,8 +139,15 @@
 
         <div class="card fb-embed">
           <div id="fb-root"></div>
-          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
-          <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61573398356288" data-tabs="timeline" data-width="500" data-height="360">
+          <div class="fb-page"
+               data-href="https://www.facebook.com/profile.php?id=61573398356288"
+               data-tabs="timeline"
+               data-width="500"
+               data-height="360"
+               data-small-header="false"
+               data-adapt-container-width="true"
+               data-hide-cover="false"
+               data-show-facepile="false">
             <blockquote cite="https://www.facebook.com/profile.php?id=61573398356288" class="fb-xfbml-parse-ignore">
               <a href="https://www.facebook.com/profile.php?id=61573398356288">Buntine Fabrication</a>
             </blockquote>
@@ -169,6 +162,45 @@
       <div>&copy; <span id="y"></span> Buntine Fabrication. All rights reserved.</div>
     </div>
   </footer>
+
+  <!-- Lazy-load FB SDK when the embed is near viewport -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fbCard = document.querySelector('.fb-embed');
+      if (!fbCard) return;
+      const obs = new IntersectionObserver(([e],o)=>{
+        if(e.isIntersecting){
+          const s = document.createElement('script');
+          s.async = true; s.defer = true; s.crossOrigin = 'anonymous';
+          s.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0';
+          document.body.appendChild(s);
+          o.disconnect();
+        }
+      }, {rootMargin:'200px'});
+      obs.observe(fbCard);
+    });
+  </script>
+
+  <!-- WebP progressive enhancement: upgrade JPEGs only if corresponding WebP exists -->
+  <script>
+    (function () {
+      var webpOk = (function() {
+        try {
+          var img = new Image();
+          img.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4ICAAAADwAQCdASoEAAQAAVAfJaQAA3AA/vuUAAA=";
+          return img.height === 2 || img.width === 2;
+        } catch(e){ return false; }
+      })();
+      if (!webpOk) return;
+      document.querySelectorAll('.gallery img[data-webp]').forEach(function(img){
+        var webp = img.getAttribute('data-webp');
+        var test = new Image();
+        test.onload = function(){ img.src = webp; };
+        test.onerror = function(){ /* keep JPEG */ };
+        test.src = webp;
+      });
+    })();
+  </script>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();

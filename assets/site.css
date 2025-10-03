@@ -1,0 +1,88 @@
+/* ---- Theme (matches v1.1) ---------------------------------------------- */
+:root{
+  --bg:#0e0e0f; --fg:#1b1b1c; --ink:#111; --ink-muted:#555;
+  --brand:#ffb703; --paper:#fff; --muted:#f6f7f8; --line:#e9eaec;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+
+/* Keep smooth scroll but respect reduced motion */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.6; color:var(--ink); background:var(--muted);
+}
+
+a{color:inherit; text-decoration:none}
+
+/* ---- Layout wrappers (as in v1.1) -------------------------------------- */
+.wrap{max-width:1100px; margin:0 auto; padding:16px}
+
+/* Ensure in-page anchors land below sticky header */
+#home, #services, #gallery, #about, #contact{ scroll-margin-top: 110px; }
+
+/* ---- Header (sticky dark bar like v1.1) -------------------------------- */
+header{
+  background:var(--fg); color:#fff; position:sticky; top:0; z-index:10;
+  box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+header .wrap{ display:flex; flex-direction:column; align-items:center; gap:8px; }
+
+/* Brand block with wide logo and phone underneath (v1.1 layout) */
+.brand{display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px}
+.brand img{
+  width:360px; max-width:100%; height:auto; object-fit:contain;
+}
+/* Phone styling (clickable) */
+.brand .phone a{
+  color:#fff; font-weight:700; letter-spacing:.2px;
+}
+.brand .phone a:hover, .brand .phone a:focus{ text-decoration:underline }
+
+/* Nav centered, simple hover */
+nav{display:flex; gap:18px; flex-wrap:wrap; justify-content:center; margin-top:2px}
+nav a{color:#fff; opacity:.92; padding:6px 8px; border-radius:6px}
+nav a:hover{opacity:1; background:rgba(255,255,255,.10)}
+
+/* ---- Hero (dark band like v1.1) ---------------------------------------- */
+.hero{background:#1b1b1c; color:#fff; padding:56px 16px}
+.hero .wrap{ text-align:center }
+.hero h1{font-size:clamp(28px,5vw,48px); margin:0 0 10px}
+.hero p{margin:0; color:#d7d7d7}
+
+/* ---- Sections & cards (v1.1 boxy look) -------------------------------- */
+main{padding:24px 16px}
+section{background:var(--paper); border:1px solid var(--line); border-radius:14px;
+  padding:24px; margin:0 auto 20px; max-width:1100px; box-shadow:0 1px 3px rgba(0,0,0,.04)}
+h2{margin-top:0}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+.card{border:1px solid #eef0f2; border-radius:12px; padding:16px; background:#fafafa}
+
+/* ---- Gallery (thumb grid like v1.1) ------------------------------------ */
+.gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px}
+.gallery img{
+  width:100%; height:auto; object-fit:cover;
+  border-radius:10px; border:1px solid #eee; background:#fff;
+}
+
+/* ---- Contact: Hours grid from v1.1 ------------------------------------- */
+.hours{display:grid; grid-template-columns:1fr auto; gap:8px; max-width:420px}
+.hours div{display:contents}
+.hours span{padding:2px 0}
+
+/* ---- Facebook embed frame ---------------------------------------------- */
+.fb-embed{border:1px solid #e5e7eb; border-radius:12px; overflow:hidden}
+
+/* ---- Footer (dark, centered) ------------------------------------------- */
+footer{background:#121213; color:#bbb; padding:24px 16px}
+.foot{max-width:1100px; margin:0 auto; display:grid; gap:12px; text-align:center}
+
+/* ---- Responsive tweaks -------------------------------------------------- */
+@media (max-width: 520px){
+  .brand img{ width:260px; }
+  nav{gap:12px}
+}
